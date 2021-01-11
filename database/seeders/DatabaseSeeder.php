@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Cuidades;
+use App\Models\Municipio;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,6 +15,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        \App\Models\User::factory(10)->create();
+        Municipio::factory(5)->create();
+        Cuidades::factory(5)->create();
     }
 }
