@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CiudadesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [CiudadesController::class,'index'])->name('home');
+Route::get('/ciudades', [CiudadesController::class,'getCiudades'])->name('ciudades');
